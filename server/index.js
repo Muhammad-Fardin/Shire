@@ -50,12 +50,8 @@ app.use("/posts", postRoutes)
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(process.env.DBURL, {
-     useNewUrlParser: true,
-     useUnifiedTopology: true,
 }).then(() => {
      app.listen(PORT, () => console.log(`Running at ${PORT}`));
-     // User.insertMany(users)
-     // Post.insertMany(posts)
 }).catch((error) => console.log(`${error} Something Went Wrong`));
 
 
